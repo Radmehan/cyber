@@ -1,0 +1,233 @@
+/*
+
+TemplateMo 566 Medic Care
+
+https://templatemo.com/tm-566-medic-care
+
+*/
+
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color:                  #FFFFFF;
+  --primary-color:                #247cff;
+  --section-bg-color:             #F9F9F9;
+  --dark-color:                   #000000;
+  --title-color:                  #565758;
+  --p-color:                      #717275;
+  --border-color:                 #eaeaea;
+
+  --body-font-family:             'Open Sans', sans-serif;
+
+  --h1-font-size:                 48px;
+  --h2-font-size:                 36px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  18px;
+  --menu-font-size:               16px;
+
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-semibold:         600;
+  --font-weight-bold:             700;
+}
+
+
+/*---------------------------------------
+  REVIEWS               
+-----------------------------------------*/
+.reviews-thumb {
+  margin-bottom: 0;
+  padding: 32px;
+}
+
+.reviews-text {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.reviews-image {
+  border-radius: 100px;
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.reviews-carousel .owl-item {
+  opacity: 0.45;
+}
+
+.reviews-carousel .owl-item.active.center {
+  opacity: 1;
+}
+
+.reviews-carousel .owl-item.active.center .reviews-thumb {
+  background: var(--dark-color);
+}
+
+.reviews-carousel .owl-item.active.center .reviews-thumb,
+.reviews-carousel .owl-item.active.center .reviews-text {
+  color: var(--white-color);
+}
+
+.reviews-carousel .owl-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reviews-carousel .owl-nav span {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+}
+
+.reviews-carousel .owl-nav .owl-prev {
+  position: relative;
+  left: -80px;
+}
+
+.reviews-carousel .owl-nav .owl-next {
+  position: relative;
+  right: -80px;
+}
+
+.reviews-carousel .owl-prev span,
+.reviews-carousel .owl-next span {
+  color: transparent;
+}
+
+.reviews-carousel .owl-prev span::before,
+.reviews-carousel .owl-next span::before {
+  font-family: bootstrap-icons;
+  display: block;
+  font-size: var(--h3-font-size);
+  color: var(--p-color);
+  width: 35px;
+  height: 35px;
+}
+
+.reviews-carousel .owl-prev span::before {
+  content: "\f12f";
+}
+
+.reviews-carousel .owl-next span::before {
+  content: "\f138";
+}
+
+/*---------------------------------------
+  BOOKING FORM            
+-----------------------------------------*/
+
+.booking-form .form-control {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  color: #6c757d;
+  font-weight: var(--font-weight-normal);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 15px;
+  transition: all 0.3s;
+}
+
+.booking-form #submit-button {
+  background: var(--dark-color);
+  border-bottom: 0;
+  font-weight: var(--font-weight-semibold);
+  color: var(--white-color);
+  text-transform: uppercase;
+  margin-top: 35px;
+}
+
+.booking-form #submit-button:hover {
+  background: var(--primary-color);
+}
+
+
+/*---------------------------------------
+  SOCIAL ICON               
+-----------------------------------------*/
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  transition: all 0.3s;
+}
+
+.social-icon:hover li:not(:hover) {
+  opacity: 0.65;
+}
+
+.social-icon-link {
+  font-size: var(--p-font-size);
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 15px;
+}
+
+.social-icon-link:hover {
+  color: var(--primary-color);
+}
+
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (min-width: 1600px) {
+ 
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+
+  .reviews-carousel .owl-nav {
+    position: relative;
+    width: auto !important;
+    transform: inherit;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100px;
+    margin: 20px auto;
+  }
+
+  .reviews-carousel .owl-nav .owl-prev,
+  .reviews-carousel .owl-nav .owl-next {
+    right: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+}
+
+@media screen and (max-width: 360px) {
+  
+  .reviews-image {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .reviews-thumb figcaption {
+    font-size: var(--menu-font-size);
+  }
+}
