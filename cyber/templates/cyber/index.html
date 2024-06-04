@@ -2,6 +2,8 @@
 {% block title %} Home {% endblock %}
 {% load static %}
 {% block css %}
+
+
 .get-btn {
   font-family: var(--font-primary);
   border: 1px solid;
@@ -83,26 +85,21 @@ url('{% static "security/img/web/bg4.jpg" %}');
 <main>
   <!-- ======= About Section ======= -->
   <section class="about" id="about">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
         <h2>About <span>Us</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corporis nam cupiditate asperiores quas dolore
-          est mollitia quos nobis cum?</p>
+        <p>We envision a secure and resilient logistics industry where companies can operate confidently without the threat of cyberattacks. Our team comprises experienced professionals with diverse backgrounds in cybersecurity and logistics, dedicated to providing unparalleled support and expertise.</p>
       </div>
-      <div class="content" data-aos="fade-up" data-aos-delay="100">
-        <div class="para">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sit ipsam impedit laudantium nostrum?
-            Distinctio porro autem sunt laboriosam quisquam deserunt dolores id temporibus, nulla quam suscipit aliquid
-            unde incidunt perspiciatis aut possimus voluptatibus esse nisi ipsa earum quod animi? Sed, unde obcaecati
-            vero
-            eligendi aliquam beatae porro libero nihil similique tempora, temporibus ratione autem esse illo. Similique
-            reiciendis numquam, quidem officiis exercitationem magni illum dolor, nam labore necessitatibus at?</p>
+      <div class="content">
+        <div class="para"  data-aos="fade-right" data-aos-delay="100">
+          <p>Welcome to our website dedicated to enhancing cybersecurity in the logistics industry. We are a team of cybersecurity experts, industry professionals, and technology enthusiasts committed to safeguarding the critical operations of logistics companies against cyber threats.</p>
+          <p>Our mission is to empower logistics companies with the knowledge, tools, and strategies they need to protect their operations from cyberattacks. We aim to create a safer and more resilient global supply chain by addressing the unique cybersecurity challenges faced by the logistics sector.</p>
 
           <div class="mt-3"><button type="button" class="get-btn" data-bs-toggle="modal"
               data-bs-target="#scheduleModal">Book a Schedule</button></div>
 
         </div>
-        <div class="image">
+        <div class="image" data-aos="fade-left" data-aos-delay="100">
           <img src="{% static 'security/img/web/bg1.png' %}" alt="">
 
         </div>
@@ -113,15 +110,13 @@ url('{% static "security/img/web/bg4.jpg" %}');
 
   <!-- ======= Contact Section ======= -->
   <section class="contact" id="contact">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
         <h2>Get In <span>Touch</span></h2>
-        <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis
-          omnis
-          tiledo stran delop</p>
+        <p>We are here to help you navigate the complex landscape of cybersecurity in logistics. Whether you need assistance with threat detection, employee training, or implementing advanced security technologies, our team is ready to support you.</p>
       </div>
       <div class="row info">
-        <div class="col-md-4 col-sm-4 col-lg-4">
+        <div class="col-md-4 col-sm-4 col-lg-4" data-aos="fade-right" data-aos-delay="100">
           <div class="details">
 
             <div class="location">
@@ -156,7 +151,7 @@ url('{% static "security/img/web/bg4.jpg" %}');
 
           </div>
         </div>
-        <div class="col-md-8 ">
+        <div class="col-md-8" data-aos="fade-left" data-aos-delay="120">
           <form action="{% url 'contact' %}" method="post" role="form" class="email-form">{% csrf_token %}
             <div class="form-group">
               <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required>
@@ -230,7 +225,7 @@ url('{% static "security/img/web/bg4.jpg" %}');
            <div class="my-3">
 
            </div>
-           <div class="text-center mt-3"><button type="submit" class="get-btn">Send Message</button></div>
+           <div class="text-center mt-3"><button type="submit" class="get-btn">Book Appoinment</button></div>
          </form>
        </div>
      </div>
