@@ -1,0 +1,445 @@
+:root {
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+}
+
+/* Colors */
+:root {
+    --color-default: #001521;
+    --color-primary: #008895;
+    --color-secondary: #10eaff;
+}
+
+/* Smooth scroll behavior */
+:root {
+    scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+  # General
+  --------------------------------------------------------------*/
+body {
+    font-family: var(--font-default);
+    background: var(--color-default);
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+}
+
+p {
+    color: var(--color-primary);
+}
+
+button {
+    /* background: var(--color-primary); */
+    border: 0;
+    padding: 14px 45px;
+    color: var(--color-primary);
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+button:hover {
+    /* background: rgba(0, 131, 116, 0.8); */
+}
+
+.get-btn {
+    font-family: var(--font-primary);
+    border: 1px solid;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgb(255 0 0 / 8%);
+    border: 2px solid rgb(255 0 0 / 10%);
+}
+
+.get-btn:hover {
+    background: rgb(255 255 255 / 5%);
+    border: 2px solid rgb(239 0 0 / 10%);
+    color: var(--color-secondary);
+}
+
+.section-header {
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.section-header h2 {
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.section-header h2:after {
+    content: "";
+    height: 3px;
+    background: var(--color-secondary);
+    position: absolute;
+    width: 17%;
+    top: 3rem;
+    left: 50%;
+    top: 115%;
+    transform: translate(-50%, -50%);
+}
+
+.section-header p {
+    padding-bottom: 24px;
+    margin-top: 2rem;
+}
+
+
+/*--------------------------------------------------------------
+  # Sections & Section Header
+  --------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+    scroll-margin-top: 70px;
+    overflow: clip;
+}
+
+header {
+    position: fixed;
+    backdrop-filter: blur(20px);
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 10000;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0px;
+}
+
+header nav .logo {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+header nav .logo .img {
+    padding: 0px 3px;
+}
+
+header nav .logo .text {
+    padding: 5px 6px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul li {
+    list-style: none;
+    padding: 3px 16px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+
+/*--------------------------------------------------------------
+# Section Hero
+--------------------------------------------------------------*/
+section.hero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+section.hero img {
+    width: 100%;
+}
+
+section.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 7px 1rem;
+}
+
+section.hero .container h1 {
+    font-size: 60px;
+    font-family: bold;
+    font-weight: bolder;
+}
+
+
+/*--------------------------------------------------------------
+# Section about
+--------------------------------------------------------------*/
+.about .container {
+    margin-top: 2rem;
+}
+
+.about .content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px 13px;
+}
+
+.about .content .para {
+    padding: 0px 14px;
+    text-align: justify;
+}
+
+.about .image {
+    padding: 5px 10px;
+}
+
+
+.about .image img {
+    transform: scaleX(1);
+}
+
+
+/*--------------------------------------------------------------
+#  Section Contact
+--------------------------------------------------------------*/
+.contact .info {
+    border-radius: 32px 32px 32px 32px;
+    background: #181d2d78;
+}
+
+.contact .col-md-4 {
+    margin: 14px 0px;
+}
+
+.contact .details {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+    /* border: 1px solid white; */
+    padding: 1rem 1rem;
+}
+
+.contact .details .location {
+    display: flex;
+    padding: 15px 0rem;
+    border: 1px solid white;
+    background: #041930;
+    margin: 10px 0px;
+    border-radius: 13px;
+}
+
+.address {
+    padding: 1px 22px;
+}
+
+.address h3 {
+    font-size: 27px;
+}
+
+.contact .details .icon i {
+    color: var(--color-secondary);
+    padding: 20px 20px;
+    font-size: 33px;
+
+}
+
+.col-md-8 {
+    padding: 1rem 2rem;
+}
+
+.contact .email-form {
+    width: 100%;
+    height: 100%;
+    /* background: #fff; */
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+    padding: 36px 30px;
+    border-radius: 0 10px 10px 0;
+}
+
+.contact .email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .email-form .error-message {
+    display: none;
+    /* color: #fff; */
+    /* background: #df1529; */
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .email-form .error-message br+br {
+    margin-top: 25px;
+}
+
+.contact .email-form .sent-message {
+    display: none;
+    /* color: #fff; */
+    /* background: #059652; */
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+
+
+.contact .email-form input,
+.contact .email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .email-form input[type=text],
+.contact .email-form input[type=email],
+.contact .email-form input[type=tel],
+.contact .email-form textarea {
+    padding: 12px 15px;
+}
+
+.contact .email-form input[type=text]:focus,
+.contact .email-form input[type=email]:focus,
+.contact .email-form textarea:focus {
+    border-color: var(--color-primary);
+}
+
+.contact .email-form textarea {
+    padding: 10px 12px;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+    font-size: 14px;
+    background-color: var(--color-primary);
+    padding: 50px 0;
+    color: white;
+}
+
+.footer .copyright {
+    text-align: center;
+}
+
+
+/* responsive design */
+@media(max-width:1199px) {
+    .contact .address {
+        padding: 6px 0px;
+    }
+}
+
+@media(max-width:1030px) {
+    .contact .col-md-4 {
+        margin: 0px 0px;
+    }
+
+    .contact .info {
+        flex-direction: column-reverse;
+        width: 100%;
+        border-radius: 32px 32px 32px 32px;
+    }
+
+    .contact .row .col-md-8 {
+        width: 100%;
+    }
+
+    .contact .row .col-md-4 {
+        width: 100%;
+    }
+
+    .contact .row .col-md-4 .details {
+        flex-direction: row;
+    }
+
+    .contact .details .location {
+        width: calc(100% / 3);
+        margin: 0px 6px;
+    }
+
+    .contact .details .icon i {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:991px) {
+    .section-header p {
+        margin-top: 2rem;
+    }
+
+    .about .content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "image"
+            "text";
+    }
+
+    .about .content .para {
+        grid-area: text;
+        margin-top: 3rem;
+    }
+
+    .about .image {
+        grid-area: image;
+    }
+
+}
+
+@media (max-width:767px) {
+    .contact .address {
+        padding: 6px 0px;
+        text-align: center;
+    }
+
+    .contact .row .col-md-4 .details {
+        flex-direction: column;
+    }
+
+    .contact .details .location {
+        width: 100%;
+        margin: 5px 6px;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:575px) {
+    .section-header p {
+        margin-top: 2rem;
+    }
+}
