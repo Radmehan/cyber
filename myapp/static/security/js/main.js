@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let menuIcon = document.getElementById('menu-icon');
+    let navLists = document.getElementById('nav-lists');
 
+    menuIcon.addEventListener('click', () => {
+        if (navLists.style.opacity === '1') {
+            navLists.style.opacity = '0';
+            navLists.style.right = '-100%';
+        } else {
+            navLists.style.opacity = '1';
+            navLists.style.right = '0%';
+        }
+    });
 
     /**
    * Initiate glightbox
