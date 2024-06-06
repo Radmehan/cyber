@@ -9,6 +9,7 @@
     --color-default: #001521;
     --color-primary: #008895;
     --color-secondary: #10eaff;
+    --color-bg: #181d2d78;
 }
 
 /* Smooth scroll behavior */
@@ -46,7 +47,7 @@ h4,
 h5,
 h6 {
     font-family: var(--font-primary);
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 p {
@@ -148,6 +149,10 @@ header nav .logo {
     justify-content: center;
 }
 
+header nav .logo .text p{
+    color:var(--color-secondary)
+}
+
 header nav .logo .img {
     padding: 0px 3px;
 }
@@ -165,6 +170,10 @@ header nav ul {
 header nav ul li {
     list-style: none;
     padding: 3px 16px;
+}
+
+header nav ul li .active{
+    color: var(--color-secondary);
 }
 
 header nav ul li a {
@@ -211,6 +220,11 @@ section.hero .container h1 {
     font-weight: bolder;
 }
 
+section.hero .container h3,
+section.hero .container h4{
+    color: var(--color-primary);
+}
+
 
 /*--------------------------------------------------------------
 # Section about
@@ -241,13 +255,201 @@ section.hero .container h1 {
     transform: scaleX(1);
 }
 
+/*--------------------------------------------------------------
+#  Section service
+--------------------------------------------------------------*/
+.service .row span {
+    color: var(--color-primary);
+}
+
+.service .row .h-100 {
+    background: var(--color-bg);
+}
+
+
+/*--------------------------------------------------------------
+#  Section Team
+--------------------------------------------------------------*/
+.testimonial-quote {
+    font-size: 54px;
+    color: #313131;
+    line-height: 1;
+}
+
+.testimonial-para {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.testimonial-thumb {
+    width: 80px;
+    margin-bottom: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-thumb img {
+    width: 100%;
+}
+
+.testimonial-name {
+    font-size: 16px;
+    font-weight: 600;
+    /* color: #d365f1; */
+    margin-bottom: 12px;
+}
+
+.testimonial-designation {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.testimonial-designation:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial-content-white .testimonial-quote {
+    color: rgba(245, 245, 245, 0.7);
+}
+
+.testimonial-content-white .testimonial-para {
+    color: #fff;
+}
+
+.testimonial-content-white .testimonial-designation {
+    color: #fff;
+}
+
+.testimonial-content-white.testimonial-flat-content .testimonial-name {
+    /* color: #fff; */
+}
+
+.testimonial-content {
+    text-align: center;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-carousel-area {
+    position: relative;
+}
+
+.testimonial-flat-thumb {
+    margin-bottom: 15px;
+}
+
+.testimonial-flat-thumb-frame {
+    position: relative;
+    border: 1px solid #6749f1;
+}
+
+.testimonial-flat-card:hover .testimonial-flat-thumb-frame:before {
+    background-color: transparent;
+}
+
+.testimonial-flat-card:hover .testimonial-flat-thumb-frame-2 {
+    position: relative;
+}
+
+.testimonial-flat-card:hover .testimonial-flat-thumb-frame-2:before {
+    background-color: transparent;
+}
+
+.testimonial-flat-thumb-frame-2 {
+    position: relative;
+    border: 1px solid #4DFF9A;
+}
+
+.testimonial-flat-content .testimonial-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-secondary)
+}
+
+.testimonial-flat-content .testimonial-designation {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 9px;
+    color: var(--color-primary);
+}
+
+.testimonial-flat-content .testimonial-designation:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial-flat-content .testimonial-para {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.testimonial-flat-content .testimonial-para:last-child {
+    margin-bottom: 0;
+}
+
+.testimonial-carousel.default-carousel .owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.testimonial-carousel.default-carousel .owl-nav .owl-prev {
+    left: 0;
+}
+
+.testimonial-carousel.default-carousel .owl-nav .owl-next {
+    right: 0;
+}
+
+.default-carousel-control .carousel-arrow {
+    position: relative;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    font-family: var(--font-primary);
+    border: 1px solid;
+    font-weight: bold;
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgb(0 137 148 / 22%);
+    border: 2px solid rgb(0 137 148 / 33%);
+}
+
+.default-carousel-control .carousel-arrow:hover {
+    background: rgb(255 255 255 / 5%);
+    border: 2px solid rgb(0 137 148 / 33%);
+    color: var(--color-secondary);
+    box-shadow: 0 0 15px rgb(0 137 148);
+}
+
+.carousel-arrow i.bi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: bold;
+}
+
+.testimonial-carousel-2-controller {
+    text-align: center;
+    margin-top: 30px;
+}
+
 
 /*--------------------------------------------------------------
 #  Section Contact
 --------------------------------------------------------------*/
 .contact .info {
     border-radius: 32px 32px 32px 32px;
-    background: #181d2d78;
+    background: var(--color-bg);
 }
 
 .contact .col-md-4 {
@@ -360,14 +562,14 @@ section.hero .container h1 {
 .email-form input[type=tel]::placeholder,
 .email-form textarea::placeholder {
     color: var(--color-primary);
-    opacity : .6
-    /* Change placeholder color to gray */
+    opacity: .6
+        /* Change placeholder color to gray */
 }
 
-.modal-content{
+.modal-content {
     backdrop-filter: blur(20px);
     background-color: transparent;
-  }
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -429,15 +631,16 @@ section.hero .container h1 {
         display: block;
         /* margin-top: -22px; */
         font-size: 32px;
-        position: absolute;
-        top: 10px;
-        right: 128px;
+        /* position: absolute; */
+        top: 50%;
+        right: 15%;
+        /* transform: translate(-50%, -50%); */
         border: 1px solid;
         font-weight: bold;
         color: var(--color-primary);
         background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 0 15px rgb(0 137 148 / 22%);
-        border: 2px solid rgb(0 137 148 / 33%);
+        border: 2px solid rgb(0 137 148 / 33%)
     }
 
     #menu-icon:hover {
@@ -488,17 +691,17 @@ section.hero .container h1 {
         grid-area: image;
     }
 
-    .contact .details .location{
+    .contact .details .location {
         padding: 15px;
         flex-direction: column;
         text-align: center;
     }
 
-    .support{
+    .support {
         position: relative;
     }
-    
-    .support p{
+
+    .support p {
         position: absolute;
         /* top: 0; */
         left: 50%;
