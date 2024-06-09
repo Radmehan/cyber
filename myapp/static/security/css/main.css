@@ -189,6 +189,17 @@ header nav ul li a {
     margin-bottom: 13px;
 }
 
+.dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center {
+    position: relative;
+    color: var(--color-secondary);
+}
+
+.dropdown-menu.show {
+    display: block;
+    background: #0000008f;
+    /* backdrop-filter: blur(20px); */
+}
+
 .dropdown a{
     color: var(--color-secondary);
 }
