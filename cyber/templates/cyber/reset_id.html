@@ -1,0 +1,25 @@
+{% extends 'cyber/base.html' %}
+{% block title %} Reset Id {% endblock %}
+{% load static %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container my-4">
+    {% if request.user.is_staff %}
+    <button type="submit" class="btn btn-danger" formaction="{% url 'reset_msg_id' %}">Reset msg_id</button>
+    {% endif %}
+    <!-- <a href="{% url 'reset_msg_id' %}">Reset Message IDs</a> -->
+    <!-- <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Reset Message IDs</button>
+    </form> -->
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

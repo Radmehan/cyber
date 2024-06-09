@@ -189,6 +189,13 @@ header nav ul li a {
     margin-bottom: 13px;
 }
 
+.dropdown a{
+    color: var(--color-secondary);
+}
+
+.dropdown a:hover{
+    color: var(--color-secondary);
+}
 
 /*--------------------------------------------------------------
 # Section Hero

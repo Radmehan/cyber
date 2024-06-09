@@ -9,4 +9,7 @@ urlpatterns = [
     path('contact/',views.contact, name='contact'),
     path('schedule/',views.schedule, name='schedule'),
     
+    path('reset_msg_id/', views.reset_msg_id, name='reset_msg_id'),
+    path('logout/',views.logoutHandle ,name="logout"),
+    
 ]

@@ -80,6 +80,22 @@
                     <li class="nav-list"><a href="#team">Team</a></li>
                     <li class="nav-list"><a href="#service">Service</a></li>
                     <li class="nav-list"><a href="#contact">Contact</a></li>
+                    {% if request.user.is_staff %}
+
+                    <li class="nav-list dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Action
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li>
+                            <a class="dropdown-item text-danger" href="{% url 'logout' %}" style="font-weight: bold;">Logout</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-danger" id="resetId" href="{% url 'reset_msg_id' %}" style="font-weight: bold;">Reset Patient Id</a>
+                          </li>
+                        </ul>
+                      </li>
+                    {% endif %}
                 </ul>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </nav>
@@ -135,6 +151,10 @@
     <script src="{% static 'security/js/main.js' %}"></script>
 
     <script>
+        let resetId = document.getElementById('resetId');
+        resetId.addEventListener('click',()=>{
+            alert('Are you sure? Do you download xls file? Do you want to delete all patient?')
+        })
         
     </script>
 
