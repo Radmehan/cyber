@@ -40,11 +40,11 @@ def schedule(request):
         schedule = Schedule(name=name, address=address, contact=contact, email=email, subject=subject, message=message)
         schedule.schedule_id = MultipleOfThreeField().pre_save(schedule, True)
 
-        if schedule.schedule_id <= 4:
+        if schedule.schedule_id <= 12:
             schedule.save()
 
         id = schedule.schedule_id
-        if id <= 4:
+        if id <= 12:
             messages.success(request, f"Thanks for book an appoinment. Your apponit number is {id}")
         else:
             messages.error(request, f"Thanks for book an appoinment. But, your apponit number is out of range")
